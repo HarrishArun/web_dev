@@ -1,34 +1,8 @@
-/* img{
-   height: 500;
-   width: 200;
-   background-color: bisque;
-} */
-html{
-    background-color: black;
-
+.darsh{
+    color: red;
 }
-.poster{
-    align-self:center;
-
-    width: 50%;
-    margin-left: 25%;
-  
-    margin-top: 100px; 
-
-
-}
-.image{
-    border: 5px solid red;
-    margin-left: 25%;
- 
-}
-.text1{
-    font-size: 3rem;
-    color: azure;
-    text-align: center;
-}
-.text2{
-    font-size: 1rem;
-    color: azure;
-    text-align: center;
+#shake{
+    color: blue;
+    font-size: 20px;
+    
 }
