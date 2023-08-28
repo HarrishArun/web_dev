@@ -1,8 +1,49 @@
-.darsh{
-    color: red;
+#dev{
+    color: yellow;
+    font-size: 3rem;
 }
-#shake{
-    color: blue;
-    font-size: 20px;
+#title{
+    font-size: 4rem;
+}
+#left-image{
+    height: 200px;
+    width: 200px;
+ float: left;
+    padding-right: 1rem;
+}
+#right-image{
     
+    height: 200px;
+    width: 200px;
+    float: left;
+}
+#left_card{
+    float: left;
+   
+}
+#right_card{
+    float: right;
+   
+}
+@media (max-width:680px){
+    #left_card{
+       width: 100%;
+       display: block;
+       margin-bottom: 30px;
+       text-align: justify;
+       
+    }
+    #right_card{
+        width: 100%;
+        display: block;
+        margin-bottom: 30px;
+        text-align: justify;
+        
+     }
+     img{
+        margin-bottom: 10px;
+        width: 100%;
+        display: inline;
+    
+     }
 }
