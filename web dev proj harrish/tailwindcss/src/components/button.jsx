@@ -1,15 +1,31 @@
-import React from 'react'
-
-function button({label,iconurl}) {
+const Button = ({
+  label,
+  iconURL,
+  backgroundColor,
+  textColor,
+  borderColor,
+  fullWidth,
+}) => {
   return (
-    <button className='flex justify-center items-center gap-2 px-7 py-4 border font-monsterrat text-lg leading-none
-     bg-coral-red rounded-full text-white border-coral-red
+    <button
+      className={`flex justify-center items-center gap-2 px-7 py-4 border font-montserrat text-lg leading-none
+      ${
+        backgroundColor
+          ? `${backgroundColor} ${textColor} ${borderColor}`
+          : "bg-coral-red text-white border-coral-red"
+      } rounded-full ${fullWidth && "w-full"}`}
+    >
+      {label}
 
-    '>{label}
-    <img className='ml-2 rounded-full w-5 h-5 '
-    src={iconurl}/>
+      {iconURL && (
+        <img
+          src={iconURL}
+          alt='arrow right icon'
+          className='ml-2 rounded-full bg-white w-5 h-5'
+        />
+      )}
     </button>
-  )
-}
+  );
+};
 
-export default button
+export default Button;

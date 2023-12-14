@@ -1,19 +1,19 @@
 import Hero from "./hero";
-import popularproducts from "./popularproducts";
-import superquality from "./superquality";
-import subscribe from "./subscribe";
-import services from "./services";
-import specialoffers from "./specialoffers";
-import footer from "./footer";
-import customerrevies from "./customerrevies";
+import PopularProducts from "./popularproducts";
+import SuperQuality from "./superquality";
+import Subscribe from "./subscribe";
+import Services from "./services";
+import SpecialOffers from "./specialoffers";
+import Footer from "./footer";
+import CustomerReviews from "./CustomerReviews";
 export{
     Hero,
-    popularproducts,
+    PopularProducts,
 
-    services,
-    specialoffers,
-    customerrevies,
-    footer,
-    subscribe,
-    superquality
+    Services,
+    SpecialOffers,
+    CustomerReviews,
+    Footer,
+    Subscribe,
+    SuperQuality
 }
