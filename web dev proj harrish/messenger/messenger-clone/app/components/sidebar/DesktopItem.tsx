@@ -13,9 +13,9 @@ interface DesktopItmsProps{
 const DesktopItem :React.FC<DesktopItmsProps>= ({label,icon,href,onClick,active}) => {
 
 
-    const handleClick=()=>{
-        if(onclick)
-    }
+    // const handleClick=()=>{
+    //     if(onclick)
+    // }
  
   return (
     <div>DesktopItem</div>
