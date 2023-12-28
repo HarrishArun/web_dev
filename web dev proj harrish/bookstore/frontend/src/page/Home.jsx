@@ -28,7 +28,7 @@ const Home = () => {
     },[])
   return (
     <div className='p-4'>
-        <div className='flex justify-center items-center gap-3'><button className='bg-sky-300 px-4 py-1 rounded-lg'onClick={() => setShowType('table')} >Table</button>
+        <div className='flex justify-center items-center'><button className='bg-sky-300 px-4 py-1 rounded-lg'onClick={() => setShowType('card')} >Table</button>
         <button className='bg-sky-300 px-4 py-1 rounded-lg'onClick={() => setShowType('card')}>card</button></div>
         <div className=' flex justify-between items-center'>
             <h3 className='text-3xl my-8'>Books List</h3>
@@ -37,17 +37,7 @@ const Home = () => {
             </Link>
         </div>
         {
-          loading ? (
-            <Spinner />
-          ) : (
-            <div className="flex justify-center">
-              {showtype === 'table' ? 
-                <BooksTable books={books} />
-               : (
-                <BooksCard books={books} />
-              )}
-            </div>
-          )
+            loading?(<Spinner/>):(showtype=='table'?<BooksTable books={books}/>:<BooksCard books={books}/>)
         }
     </div>
   )
