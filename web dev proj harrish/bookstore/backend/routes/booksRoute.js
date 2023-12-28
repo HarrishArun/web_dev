@@ -23,44 +23,34 @@ router.post('/',async(request,response)=>{
     }
 });
 router.get('/',async(request,response)=>{
-
-
     try{
         const books=await Book.find({});
-        return response.status(200).json({
-            count:books.length,
-            data:books
-        });
+        return response.status(200).json(books);
     }
     catch(error){
         console.log(error.message);
         response.status(500)
-
-
     }
 });//for getting all books
 
 
 //:id is for getting books by id
-router.get('/:id',async(request,response)=>{
-
-
-    try{
-        const{id}=request.params;
-        const book=await Book.findById(id)
-        return response.status(200).json({
-            count:book.length,
-            data:book
-        });
+router.get('/:id', async (request, response) => {
+    try {
+      const { id } = request.params;
+      const book = await Book.findById(id);
+  
+      if (!book) {
+        return response.status(404).json({ message: 'Book not found' });
+      }
+  
+      return response.status(200).json(book);
+    } catch (error) {
+      console.error(error.message);
+      return response.status(500).json({ message: 'Internal server error' });
     }
-    catch(error){
-        console.log(error.message);
-        response.status(500)
-
-
-    }
-});
-
+  });
+  
 //route for updating a book
 
 router.put('/:id', async (request, response) => {
