@@ -1,10 +1,10 @@
 import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
-import { BsFillPersonLinesFill } from "react-icons/bs";
+
 import { BiLogoPlayStore } from "react-icons/bi";
-
-
+import { FaDownload } from "react-icons/fa6";
+import { RiTwitterXLine } from "react-icons/ri";
 const SocialLinks = () => {
   const links=[
     {
@@ -36,7 +36,7 @@ const SocialLinks = () => {
     {
       id: 4,
       child:(
-        <>Resume<BsFillPersonLinesFill size={30}/></>
+        <>Resume<FaDownload size={30}/></>
       ),
       href:"/resume.pdf",
       style:'tounded-br-md',
@@ -50,10 +50,19 @@ const SocialLinks = () => {
       href:"mailto:harrisharun2003@gmail.com",
      
     },  
+    {
+      id: 6,
+      child:(
+        <>Twitter<RiTwitterXLine size={30}/></>
+      ),
+      href:"https://twitter.com/Harrisharun2",
+      style:'tounded-tr-md'
+    },
+  
   ]
  
 return(
-  <div className="hidden md:flex flex-col top-[23%] left-0 fixed bg-gray-700">
+  <div className="hidden lg:flex flex-col top-[23%] left-0 fixed bg-gray-700">
     <ul>
 
     {links.map(({ id, child, href, style, download }) => (

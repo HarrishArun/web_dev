@@ -3,7 +3,7 @@ import HeroImage from '../assets/HeroImage.jpg';
 import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
 import { TypeAnimation } from 'react-type-animation';
 import {useState } from 'react';
-
+import Mobilesocial from './Mobilesocialss';
 import { Link as ScrollLink } from 'react-scroll';
 const Home = () => {
   const [ nav,setNav] = useState(false);
@@ -29,7 +29,7 @@ const Home = () => {
     <div name="home" className="w-full bg-gradient-to-b from-black via-black to-gray-800  pl-5 ">
       <div className="max-w-screen-lg mx-auto flex flex-col items-center  h-full md:flex-row  justify-between">
         <div className="flex flex-col justify-center h-full pr-6 text-justify w-full  ">
-          <h2 className="text-3xl  sm:text-5xl font-bold text-white ">
+          <h2 className="text-3xl md:text-4xl sm:text-5xl font-bold text-white ">
             <span style={{ color: '#fff' }}>I'm</span> a {' '}
             <TypeAnimation
               sequence={[
@@ -57,11 +57,11 @@ const Home = () => {
           <p className="text-gray-200 py-4 max-w text-sm sm:text-2xl mr-3">
             Hello!, I'm Harrish Arun, a Computer Science Engineering student pursuing B.Tech at SRM Institute of Science and Technology. My academic journey has been marked by diverse explorations in Development, Design, Leadership, and Management. I specialize in App and Web development, UI/UX design, and AI/ML. Beyond my skill set, I've excelled academically, securing over 91% throughout my schooling and attaining a remarkable 9.54 GPA in my degree program
           </p>
-          <div className=' text-sm sm:text-lg font-mono font-bold  text-white
-            '>
-            <time>Email : harrisharun2003@gmail.com</time><br/>
-            <time  >Contact no : 7010946183</time>
-          </div>
+          <div class='text-sm sm:text-lg font-mono font-bold text-white bg-gray-800 p-4 rounded-md'>
+    <p>Email: <a href='mailto:harrisharun2003@gmail.com' class='text-blue-300'>harrisharun2003@gmail.com</a></p>
+    <p>Contact no: <span class='text-blue-300'>7010946183</span></p>
+</div>
+          <Mobilesocial/>
          
            
             {links.map(({ id, link }) => (  <div><button  className="group text-white w-fit px-6 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to to-blue-500 cursor-pointer">
