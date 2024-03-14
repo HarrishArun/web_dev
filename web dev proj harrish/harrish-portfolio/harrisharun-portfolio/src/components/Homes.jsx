@@ -7,8 +7,7 @@ import Mobilesocial from './Mobilesocialss';
 import { Link as ScrollLink } from 'react-scroll';
 const Home = () => {
   const [ nav,setNav] = useState(false);
-  const blueStyle = {
-    color: '#02ecff',
+  const blueStyle = {    color: '#02ecff',
   
     display: 'inline-block'
   };
@@ -27,7 +26,7 @@ const Home = () => {
 
   return (
     <div name="home" className="w-full bg-gradient-to-b from-black via-black to-gray-800  pl-5 ">
-      <div className="max-w-screen-lg mx-auto flex flex-col items-center  h-full md:flex-row  justify-between">
+      <div className="max-w-screen-lg mx-auto flex flex-col items-center  h-full md:flex-row justify-between">
         <div className="flex flex-col justify-center h-full pr-6 text-justify w-full  ">
           <h2 className="text-3xl md:text-4xl sm:text-5xl font-bold text-white ">
             <span style={{ color: '#fff' }}>I'm</span> a {' '}
